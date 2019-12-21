@@ -5,12 +5,7 @@ import com.kot.bitcoinchart.di.scope.ApplicationScope
 import dagger.Module
 import dagger.Provides
 @Module
-class ContextModule constructor(context: Context) {
-    lateinit var context: Context
-
-    fun ContextModule(context: Context) {
-        this.context = context
-    }
+class ContextModule constructor(private val context: Context) {
 
     @ApplicationScope
     @Provides

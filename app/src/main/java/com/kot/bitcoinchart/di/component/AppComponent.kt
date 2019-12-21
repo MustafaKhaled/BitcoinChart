@@ -1,6 +1,7 @@
 package com.kot.bitcoinchart.di.component
 
 import android.content.Context
+import com.kot.bitcoinchart.data.remote.ApiServices
 import com.kot.bitcoinchart.di.module.ContextModule
 import com.kot.bitcoinchart.di.module.OkHttpClientModule
 import com.kot.bitcoinchart.di.module.RetrofitModule
@@ -14,4 +15,5 @@ public interface AppComponent {
 
     fun exposeRetrofit(): Retrofit
     fun exposeContext():Context
+    fun exposeApiServices(): ApiServices
 }

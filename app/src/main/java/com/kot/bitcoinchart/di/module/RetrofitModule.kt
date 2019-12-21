@@ -3,6 +3,7 @@ package com.kot.bitcoinchart.di.module
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.kot.bitcoinchart.BuildConfig.BASE_URL
+import com.kot.bitcoinchart.data.remote.ApiServices
 import com.kot.bitcoinchart.di.scope.ApplicationScope
 import dagger.Module
 import dagger.Provides
@@ -39,4 +40,10 @@ class RetrofitModule {
     fun providesGsonConverterFactory(gson: Gson): GsonConverterFactory {
         return GsonConverterFactory.create(gson)
     }
+
+    @Provides
+    fun createSettingsAPI(retrofit: Retrofit): ApiServices {
+        return retrofit.create(ApiServices::class.java)
+    }
+
 }
