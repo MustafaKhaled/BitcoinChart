@@ -32,8 +32,7 @@ class BitcoinMarketPriceUseCaseTest {
 
     @Test
     fun should_return_data_from_repo(){
-        Mockito.verify(repo).getBitcoinMarketPrice()
-//        Mockito.`when`(apiService.getMarketPrice()).thenReturn(Single.fromObservable(Observable.just(MarketPriceResponse("","","","","",
-//            ArrayList<Values>())))).then(Answer())
+        Mockito.`when`(apiService.getMarketPrice()).thenReturn(Single.fromObservable(Observable.just(MarketPriceResponse("","","","","",
+            ArrayList<Values>()))))
     }
 }
