@@ -15,23 +15,16 @@ class OkHttpClientModule {
     @ApplicationScope
     @Provides
     fun getOkHttpClient(
-        cache: Cache?,
         httpLoggingInterceptor: HttpLoggingInterceptor?
     ): OkHttpClient {
         return OkHttpClient()
             .newBuilder()
-            .cache(cache)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor!!)
             .build()
     }
 
-    @ApplicationScope
-    @Provides
-    fun providesCache(cacheFile: File?): Cache {
-        return Cache(cacheFile!!, 10 * 1000 * 1000)
-    }
 
     @ApplicationScope
     @Provides

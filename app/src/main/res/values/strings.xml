@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BitcoinChart</string>
+    <string name="failure_error_msg">Something went wrong</string>
 </resources>
