@@ -25,7 +25,10 @@ import com.kot.bitcoinchart.ui.di.DaggerBitcoinChartComponent
 import com.kot.bitcoinchart.util.MyApplication
 import com.kot.bitcoinchart.util.Results
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
+import kotlin.collections.ArrayList
 import kotlin.math.round
 
 
@@ -62,7 +65,7 @@ class BitcoinChart : AppCompatActivity() {
                     chart.visibility = View.VISIBLE
                     var seriesData: ArrayList<DataEntry> = ArrayList()
                     for (value: Values in it.data!!.values) {
-                        seriesData.add(CustomDataEntry(value.x.toString(), round(value.y)))
+                        seriesData.add(CustomDataEntry(formatDate(value.x), round(value.y)))
                     }
                     drawChart(seriesData)
                 }
@@ -77,6 +80,12 @@ class BitcoinChart : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    fun formatDate(value: Long): String{
+        val sdf = SimpleDateFormat("yyyy-MM-dd")
+        val date = Date(value * 1000)
+        return sdf.format(date)
     }
 
     private fun drawChart(list: ArrayList<DataEntry>) {
