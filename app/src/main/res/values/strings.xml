@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BitcoinChart</string>
     <string name="failure_error_msg">Something went wrong</string>
+    <string name="usd_average_indicator">USD Average Price</string>
 </resources>
