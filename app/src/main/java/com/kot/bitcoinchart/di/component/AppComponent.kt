@@ -11,7 +11,7 @@ import retrofit2.Retrofit
 
 @ApplicationScope
 @Component(modules = [OkHttpClientModule::class,RetrofitModule::class,ContextModule::class])
-public interface AppComponent {
+interface AppComponent {
 
     fun exposeRetrofit(): Retrofit
     fun exposeContext():Context
