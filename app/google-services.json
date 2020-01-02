@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "257108375367",
+    "firebase_url": "https://bitcoinchart-a6c4c.firebaseio.com",
+    "project_id": "bitcoinchart-a6c4c",
+    "storage_bucket": "bitcoinchart-a6c4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257108375367:android:0ad68bf7700ba659813e62",
+        "android_client_info": {
+          "package_name": "com.kot.bitcoinchart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257108375367-ssvq2rj9q3e3dqtq0c3i2us6a4u8e6qi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI_iViqbtieXxEnfGa8w0Aid9fjBQ4Hls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257108375367-ssvq2rj9q3e3dqtq0c3i2us6a4u8e6qi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
